@@ -16,13 +16,14 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER:  findmylifepartner-cluster
   GKE_ZONE: europe-west2
   DEPLOYMENT_NAME: gke-findmylifepartner-app
-  IMAGE: static-site
+  IMAGE: findmylifepartner
 
 jobs:
   setup-build-publish-deploy:
