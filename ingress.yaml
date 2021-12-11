@@ -1,0 +1,13 @@
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: findmylifepartner-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: findmylifepartner-cluster-ip-service
+          servicePort: 8080
